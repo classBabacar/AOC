@@ -2,12 +2,10 @@ const { input } = require("./input");
 
 let safeCount = 0;
 input.forEach((line) => {
-  const allNumbers = line.split(" ");
+  const currentSetOfNumbers = line.split(" ");
 
   // console.log(allNumbers, isDecreasing(allNumbers), isIncreasing(allNumbers));
-  if (isDecreasing(allNumbers)) {
-    safeCount++;
-  } else if (isIncreasing(allNumbers)) {
+  if (isDecreasing(currentSetOfNumbers) || isIncreasing(currentSetOfNumbers)) {
     safeCount++;
   }
 });
