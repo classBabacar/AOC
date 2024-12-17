@@ -7,8 +7,8 @@ input.forEach((line) => {
   const idxs = findAllIndexes("mul", line);
   for (let i = 0; i <= idxs.length - 1; ++i) {
     // Indexes of where the "mul" exists in the current line
-    let start = idxs[i];
-    let end = i == idxs.length - 1 ? line.length : idxs[i + 1];
+    const start = idxs[i];
+    const end = i == idxs.length - 1 ? line.length : idxs[i + 1];
 
     sum += getMultipleSum(line, start, end);
   }
@@ -17,7 +17,7 @@ input.forEach((line) => {
 console.log("Result:", sum);
 
 function findAllIndexes(phrase, string) {
-  let indexes = [];
+  const indexes = [];
   let startIndex = 0;
 
   while (true) {
